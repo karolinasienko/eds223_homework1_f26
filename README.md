@@ -1,8 +1,8 @@
-# EDS 223: Homework 1 - Geospatial Analysis of Environmental Injustice in Chittenden County, VT
+# EDS 223: Homework 1 - Geospatial Analysis of Environmental Injustice in Warren County, NC
 
 
 ## Purpose of this Repository
-This repository is for Homework 1 for EDS 223: Geospatial Analysis & Remote Sensing. It uses data from EJScreen, EPA's environmental justice screening and mapping tool, that uses Census block groups as the basic geographic unit. Because it contains data across the entire United States, it was filtered to specifically look at Chittenden County, Vermont. The goal was to build a geospatial maps in `R` using the `tmap` package to showcase XYZ.
+This repository is for Homework 1 for EDS 223: Geospatial Analysis & Remote Sensing. It uses data from EJScreen, EPA's environmental justice screening and mapping tool, that uses Census block groups as the basic geographic unit. Because it contains data across the entire United States, it was filtered to specifically look at Warren County, NC. The goal was to build a geospatial maps in `R` using the `tmap` package to showcase the environmental injustice relationship between the percentage of POC and toxic releases to air in Warren County, NC.
 
 
 ## Package Dependencies
