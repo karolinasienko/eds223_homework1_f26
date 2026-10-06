@@ -1,0 +1,82 @@
+---
+title: "EDS 223: Homework Assignment 1"
+subtitle: "Relationship Between POC and Toxic Releases to Air in Warren County, NC"
+author: "Karolina Sienko"
+date: 10-05-2026
+format:
+ pdf:
+  toc: false
+  code-fold: false
+execute:
+ echo: true
+ warning: false
+ message: false
+ results: hide
+
+---
+
+```{r}
+#| results: hide
+
+library(tidyverse)
+library(sf)
+library(here)
+library(tmap) # for static and interactive maps
+
+# read in geodatabase of EJScreen data at the Census Block Group level
+ejscreen <- sf::st_read(here::here("data", 
+"ejscreen","EJSCREEN_2023_BG_StatePct_with_AS_CNMI_GU_VI.gdb")) 
+
+# filter to a state you are interested in
+nc <- ejscreen %>%
+  dplyr::filter(ST_ABBREV == "NC") 
+
+# filter to a county you are interested in
+warren <- nc %>%
+  dplyr::filter(CNTY_NAME %in% c("Warren County"))
+
+# find the average values for all variables within counties
+nc_counties <- aggregate(nc, by = list(nc$CNTY_NAME), FUN = mean)
+```
+
+
+
+## Mapping Percentage of POC in Warren County, NC
+
+```{r}
+tmap_mode("plot")
+
+tm_shape(warren) + 
+  tm_polygons(size = 0.5,
+  fill="PEOPCOLORPCT",
+  fill.scale = tm_scale(values = c("pink", "darkred")),
+  fill.legend = tm_legend(title = "POC (%)")
+  ) +
+  tm_title("Percentage POC in Warren County, NC") +
+  tm_scalebar(position = c("bottom", "left")) + # positioning scalebar
+  tm_compass(position = c("bottom", "right"))
+
+```
+
+## Mapping Toxic Releases to Air in Warren County, NC
+
+```{r}
+tmap_mode("plot")
+
+tm_shape(warren) + 
+  tm_polygons(size = 0.5,
+  fill="RSEI_AIR",
+  fill.scale = tm_scale(values = c("-viridis")),
+  fill.legend = tm_legend(title = "Toxic Releases to Air")
+  ) +
+  tm_title("Toxic Releases to Air in Warren County, NC") +
+  tm_scalebar(position = c("bottom", "left")) + # positioning scalebar
+  tm_compass(position = c("bottom", "right"))
+```
+
+
+## Analysis:
+
+
+
+## Data Citation:
