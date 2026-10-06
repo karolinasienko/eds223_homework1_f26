@@ -29,6 +29,8 @@ run `tree`
 ## Data Information & Access
 This analysis uses data from the EPA's previous [EJScreen: Environmental Justice Screening and Mapping Tool](https://www.epa.gov/ejscreen), accessed on October 1, 2026. The tool, when it existed, used national data to highlight places that had higher environmental burdens and vulnerable populations. 
 
+An unofficial version of the EJScreen tool can be found [here](https://pedp-ejscreen.azurewebsites.net/).
+
 
 
 ## Authors
