@@ -13,8 +13,6 @@ This repository is for Homework 1 for EDS 223: Geospatial Analysis & Remote Sens
 
 
 ## File Structure
-run `tree`
-
 ```
 .
 ├── data
@@ -38,6 +36,8 @@ Author: [Karolina Sienko](https://github.com/karolinasienko)
 
 
 ## Citations
-U.S. Environmental Protection Agency (EPA), 2023. EJScreen Technical Documentation.
+United States Environmental Protection Agency (EPA), 2023. EJScreen Technical Documentation.
 
-United States Environmental Protection Agency. 2023 version. EJSCREEN. Retrieved: October 1, 2026.
+United States Environmental Protection Agency (EPA). 2023 version. EJSCREEN. Accessed October 1, 2026.
+
+United States Environmental Protection Agency (EPA). (2026, February 10). *Health and Environmental Effects of Hazardous Air Pollutants*. EPA. [https://www.epa.gov/haps/health-and-environmental-effects-hazardous-air-pollutants](https://www.epa.gov/haps/health-and-environmental-effects-hazardous-air-pollutants). Accessed October 7, 2026.
