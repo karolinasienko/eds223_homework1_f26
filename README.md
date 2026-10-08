@@ -1,4 +1,4 @@
-# EDS 223: Homework 1 - Geospatial Analysis of Environmental Injustice in Warren County, NC
+# EDS 223: Homework 1 - Analysis of the Relationship Between POC and Toxic Releases to Air in Warren County, NC
 
 
 ## Purpose of this Repository
